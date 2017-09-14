@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <!-- Generic page styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- blueimp Gallery styles -->
+  <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+  <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="jquery.fileupload.css">
+  <link rel="stylesheet" href="jquery.fileupload-ui.css">
+  <link rel="stylesheet" href="keen-dashboards.css">
+  <link rel="stylesheet" type="text/css" href="keen-dashboards.css">
+  <link rel="stylesheet" type="text/css" href="cluster-app.css">
+  <link rel="stylesheet" href="vis-tabs.css">
+  <link rel="stylesheet" href="d3_plots.css">
+  <link rel="stylesheet" href="introjs.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="w3.css">
+  <script src="genScript.js"></script>
+  <script src="jquery-1.12.4.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="navbar-brand" href="http://knoweng.org/" target="_blank">KnowEnG</a>
+      </div>
+      <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <!--<li><a href="#">Home</a>-->
+        </li>
+        <li><a href="http://knowdev.cse.illinois.edu/education/sequenceng-dev/methods.php">Sequencing Methods</a>
+        </li>
+        <li><a href="https://knoweng.org/education/clustereng/">ClusterEnG</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+
+
+            <!--<script src="myJs.js"></script> #334B5B -->
+<header>
+<div class="container">
+  <a href="http://knoweng.cse.illinois.edu/" target = "_blank"><left><img id="" src="draw/knowlog.png" width="243" height="54"></left></a> 
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <a href="http://datascience.nih.gov/bd2k" target = "_blank"><right><img id="" src="draw/nih.png" width="72" height="72"></right></a>
+
+  <center><h1 style="font-family: Garamond ;">SequencEnG</h1></center>
+
+<hr/>
+<center><h1 style="font-family: Garamond ;">Automated Software Decision Support System for ChIP-seq</h1></center>
+<hr/>
+</header>
+
+<div class="w3-container w3-teal">
+  <h2 style="font-family: Garamond"><center>Step 1</center></h2>
+</div>
+
+  <center><h3 style="font-family: Garamond ;"><i>1. Click on any computational method below to view it's pipeline</i></h3></center>
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1" style="font-family: Garamond ;" >Automated Software Decision Support System for ChIP-seq</a>
+        </h4>
+      </div>
+
+      <div id="container">
+        <ul class="list-group">
+          <li class="list-group-item" style="font-family: Garamond ;"><button onclick="myFunction()">Peak Calling</button></li>
+          <li class="list-group-item" style="font-family: Garamond ;"><button onclick="myFunction1()">Differential Binding</button></li>
+          <li class="list-group-item" style="font-family: Garamond ;"><button onclick="myFunction2()">Motif Analysis</button></li>
+          <li class="list-group-item" style="font-family: Garamond ;" ><button onclick="myFunction3()">Peak Anotation</button></li>
+          <li class="list-group-item" style="font-family: Garamond ;"><button onclick="myFunction4()">Gene Ontology Analysis</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<center><img id="myImg" src="draw/blank.png" width="812" height="424"></center>
+
+
+
+<!-----------------------------------------------------TABLES BELOW-------------------------------------------------->
+
+
+
+
+<!-----------------------------------------------------PEAK CALLING-------------------------------------------------->
+</br>
+<div class="w3-container w3-teal">
+  <h2 style="font-family: Garamond"><center>Step 2</center></h2>
+</div>
+
+  <center><h3 style="font-family: Garamond ;"><i>Click on the Pipeline Step below to view comparisons</i></h3></center>
+
+ <div id="div1"  style="display:none;" class="answer_list"  >                                                 <!--<div style="overflow-x:auto;">-->
+  <table>
+    <tr>
+      <th>Pipeline Step</th>
+      <th>Recommended Software</th>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView1()">Quality Control of Reads</button></td>
+      <td><button onclick="popUp()">FastQC</button></td>
+    </tr>
+     <tr>
+      <td><button onclick="mySISView2()">Read Mapping</button></td>
+      <td><button onclick="myFunctionView1()">BWA, Bowtie, Bowtie2</td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView3()">Quality Control of Read Counts After Mapping</button></td>
+      <td><button onclick="popUp()">CHANCE</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView4()">Peak Calling</button></td>
+      <td><button onclick="popUp()">MACS</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView5()">Motif Analysis</button></td>
+      <td><button onclick="myFunctionView2()">CisGenome, MEME-ChIP</button></td>
+    </tr>
+     <tr>
+      <td><button onclick="mySISView6()">Peak Annotation</button></td>
+      <td><button onclick="popUp()">ChIPpeakAnno</button></td>
+    </tr>
+  </div>
+  </table>
+</div><onclick="myFunctionA()"/>
+
+ 
+ <!-----------------------------------------------------Diff-------------------------------------------------->
+
+ <div id="div2" style="display:none;" class="answer_list" >                                     
+  <table>
+    <tr>
+      <th>Pipeline Step</th>
+      <th>Recommended Software</th>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView1()">Quality Control of Reads</button></td>
+      <td><button onclick="popUp()">FastQC</button></td> 
+    </tr>
+     <tr>
+      <td><button onclick="mySISView2()">Read Mapping</button></td>
+      <td><button onclick="myFunctionView1()">BWA, Bowtie, Bowtie2</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView3()">Quality Control of Read Counts After Mapping</button></td>
+      <td><button onclick="popUp()">CHANCE</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView4()">Peak Calling</button></td>
+      <td><button onclick="popUp()">MACS</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView7()">Differential Binding</button></td>
+      <td><button onclick="">ChIPDiff, Manorm</button></td>
+    </tr>
+  </table>
+</div><onclick="myFunction1A()"/>
+
+
+
+<!-----------------------------------------------------Motif Ana-------------------------------------------------->
+
+ <div id="div3" style="display:none;" class="answer_list" >                                     
+  <table>
+    <tr>
+      <th>Pipeline Step</th>
+      <th>Recommended Software</th>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView1()">Quality Control of Reads</button></td>
+      <td><button onclick="popUp()">FastQC</button></td>
+    </tr>
+     <tr>
+      <td><button onclick="mySISView2()">Read Mapping</button></td>
+      <td><button onclick="myFunctionView1()">BWA, Bowtie, Bowtie2</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView3()">Quality Control of Read Counts After Mapping</button></td>
+      <td><button onclick="popUp()">CHANCE</td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView4()">Peak Calling</button></td>
+      <td><button onclick="popUp()">MACS</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView5()">Motif Analysis</button></td>
+      <td><button onclick="myFunctionView2()">CisGenome, MEME-ChIP</button></td>
+    </tr>
+  </table>
+</div><onclick="myFunction2A()"/>
+
+
+<!-----------------------------------------------------Peak Anno-------------------------------------------------->
+
+ <div id="div4" style="display:none;" class="answer_list" >                                     
+  <table>
+    <tr>
+      <th>Pipeline Step</th>
+      <th>Recommended Software</th>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView1()">Quality Control of Reads</button></td>
+      <td><button onclick="popUp()">FastQC</button></td>
+    </tr>
+     <tr>
+      <td><button onclick="mySISView2()">Read Mapping</button></td>
+      <td><button onclick="myFunctionView1()">BWA, Bowtie, Bowtie2</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView3()">Quality Control of Read Counts After Mapping</button></td>
+      <td><button onclick="popUp()">CHANCE</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView4()">Peak Calling</button></td>
+      <td><button onclick="popUp()">MACS</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView6()">Peak Annotation</button></td>
+      <td><button onclick="popUp()">ChIPpeakAnno</button></td>
+    </tr>
+  </table>
+</div><onclick="myFunction3A()"/>
+
+
+<!-----------------------------------------------------GO-------------------------------------------------->
+
+ <div id="div5" style="display:none;" class="answer_list" >                                     
+  <table>
+    <tr>
+      <th>Pipeline Step</th>
+      <th>Recommended Software</th>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView1()">Quality Control of Reads</button></td>
+      <td><button onclick="popUp()">FastQC</button></td>
+    </tr>
+     <tr>
+      <td><button onclick="mySISView2()">Read Mapping</button></td>
+      <td><button onclick="myFunctionView1()">BWA, Bowtie, Bowtie2</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView3()">Quality Control of Read Counts After Mapping</button></td>
+      <td><button onclick="popUp()">CHANCE</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView4()">Peak Calling</button></td>
+      <td><button onclick="popUp()">MACS</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="mySISView8()">Gene Ontology Analysis</button></td>
+      <td><button onclick="popUp()">David</button></td>
+    </tr>
+    <!--<tr>
+      <td><button onclick="">Gene Annotation</button></td>
+      <td><button onclick="popUp()">Tbd</button></td>
+    </tr>-->
+  </table>
+</div><onclick="myFunction4A()"/>
+
+
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------->
+
+
+
+
+  <!-----------------------------------------------------All Softwares + Desc-------------------------------------------------->
+
+
+ <div id="qcor" style="display:none;" class="answer_list" >    <!-- QcofReads-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>FastQC</b></td>
+      <td>Quality control tool for high throughput raw sequence data</td>
+      <td>Plot: Basic Statistics;Per base sequence quality;Per sequence quality scores; Per base sequence content; Per base GC content;Per sequence GC content; Per base N content; Sequence Length Distribution; Sequence Duplication Levels;Overrepresented sequences; Kmer Content; has a GUI.</td>
+      <td>Only report view, no trimming or filtering</td>
+    </tr>
+    <tr>
+      <td><b>QrQc</b></td>
+      <td>Qrqc is a fast and extensible R package that reports basic quality and summary statistics on FASTQ and FASTA files.</td>
+      <td>Base and quality distribution by position, sequence length distribution, and common sequences.</td>
+    </tr>
+    <tr>
+      <td><b>Scythe</b></td>
+      <td>Scythe uses a Naive Bayesian approach to classify contaminant substrings in sequence reads. It considers quality information, which can make it robust in picking out 3â€²-end adapters, which often include poor quality bases.</td>
+    </tr>
+    <tr>
+      <td><b>Sabre</b></td>
+      <td>A barcode demultiplexing and trimming tool for FASTQ files</td>
+    </tr>
+    <tr>
+      <td><b>HTQC</b></td>
+      <td>A fast quality control toolkit for Illumina sequencing data</td>
+      <td>The HTQC toolkit can generate reads quality assessment faster than existing tools, providing guidance for reads filtration utilities that allow users to choose different strategies to remove low quality reads</td>
+      <td>For Illumina</td>
+    </tr>
+  </table>
+</div>
+
+
+
+ 
+ <div id="rm" style="display:none;" class="answer_list" >    <!--Read Mapping-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>Bowtie</b></td>
+      <td>Ultrafast and memory-efficient read-mapper that alignes short DNA sequences to given genomes.</td>
+      <td>Low memory footprint.</td>
+      <td>Does not support gapped alignments; Upper limit on read length (1024 bp);Does not guanrantee to find best read if best match is an inexact one</td>
+    </tr>
+    <tr>
+      <td><b>Bowtie2</b></td>
+      <td></td>
+      <td>Supports gapped alignment. For reads longer than about 50 bp Bowtie 2 is generally faster, more sensitive, and uses less memory than Bowtie 1. For relatively short reads (e.g. less than 50 bp) Bowtie 1 is sometimes faster and/or more sensitive.</td>
+      <td>Base and quality distribution by position, sequence length distribution, and common sequences.</td>
+    </tr>
+    <tr>
+      <td><b>BWA</b></td>
+      <td>Uses a Burrows-Wheeler transform to create an index of the genome. It's a bit slower than bowtie but allows indels in alignment.</td>
+      <td></td>
+      <td>Pairing is slower for shorter reads.</td>
+    </tr>
+    <tr>
+      <td><b>SOAP2</b></td>
+      <td>Super fast and accurate alignment for huge amounts of short reads generated by Illumina/Solexa Genome Analyzer.</td>
+    </tr>
+    <tr>
+      <td><b>MAQ</b></td>
+      <td>Mapping short DNA sequencing reads and calling variants using mapping quality scores.</td>
+      <td>Is fast; Mismatches are weighted based on quality score to distinguish SNP and sequencing error.</td>
+      <td>Does not guarantee to find best match for a read.</td>
+    </tr>
+    <tr>
+      <td><b>ELAND</b></td>
+      <td>Eland substantially influences many aligners in this category and still outperforms many followers. Although it is not the fastest any more, it is close to the fastest and has the smallest memory footprint. Eland itself works for 32bp single-end reads only. Additional Perl scripts in GAPipeline extend its ability.</td>
+      <td></td>
+      <td>for Solexa platform</td>
+    </tr>
+  </table>
+</div>
+
+
+
+ <div id="qcoram" style="display:none;" class="answer_list" >    <!--Quality C of RQAM-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>CHANCE</b></td>
+      <td>ChIP-seq Analytics and Confidence Estimation (CHANCE) is a software for assessing the quality of ChIP-seq experiments and providing feedback for the optimization of ChIP and library generation protocols.</td>
+      <td>Assesses Immunoprecipication strength using signal extraction calling; provides a graphical view of IP strength; good for identifying quality issues.</td>
+      <td>Only for human data.</td>
+    </tr>
+  </table>
+</div>
+
+
+ 
+ <div id="peakcall" style="display:none;" class="answer_list" >    <!--Peak Calling-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>MACS</b></td>
+      <td>Model based analysis of ChIP-seq (MACS). Identifiers genome-wide location of transcription factor binding or histone modification from ChIP-seq data.</td>
+      <td>Has options for both narrow and broad peak, thus good for RNA PolII;supports both single and paired-end reads; enrichment model: local Possion; normalizing</td>
+    </tr>
+    <tr>
+      <td><b>SIPeS</b></td>
+      <td>SIPeS a novel algorithm for precise identification of binding sites from short reads generated by paired-end solexa ChIP-Seq technology.</td>
+      <td>Better resolution for binding site discovery.</td>
+      <td>Only for paired-end.</td>
+    </tr>
+    <tr>
+      <td><b>SPP</b></td>
+      <td>SPP is a R package especially designed for the analysis of Chip-Seq data from Illummina platform.</td>
+      <td>has options for both narrow and broad peak, thus good for RNA PolII; use cross-correlation between minus and plus strand to determine protein-DNA interacting regions</td>
+      <td>For Solexa platform.</td>
+    </tr>
+    <tr>
+      <td><b>CSAR</b></td>
+      <td>Fast and accurate detection of protein-bound genomic regions</td>
+      <td>Enrichment model: Possion </td>
+    </tr>
+    <tr>
+      <td><b>CisGenome</b></td>
+      <td>An integrated tool for tiling array, ChIP-seq, genome and cis-regulatory element analysis.</td>
+      <td>Enrichment model: negative binomial.</td>
+    </tr>
+    <tr>
+      <td><b>ZINBA</b></td>
+      <td>ZINBA identifies genomic regions enriched in a variety of ChIP-seq experiments, calling both broad and narrow modes of enrichment across a range of signal-to-noise ratios. ZINBA models and accounts for factors that co-vary with background or experimental signal, such as G/C content.</td>
+      <td>Has options for both narrow and broad peak, thus good for RNA PolII;is good for predicting broad regions (eg. H3K27me3); enrichment model: zero-inflated negative binomial  </td>
+    </tr>
+    <tr>
+      <td><b>Hpeak</b></td>
+      <td>A HMM-based algorithm for defining read-enriched regions from massive parallel sequencing data.</td>
+      <td>Enrich ment model: Hidden Markov Model.</td>
+    </tr>
+       <tr>
+      <td><b>BayesPeak</b></td>
+      <td>An implementation of the BayesPeak algorithm for peak-calling in ChIP-seq data.</td>
+      <td>ChIP-seq data. Implemented in R Bioconductor; enrich ment model: Hidden Markov Model.</td>
+    </tr>
+    </tr>
+       <tr>
+      <td><b>PICS</b></td>
+      <td>For extracting information from ChIP-Seq aligned-read data in order to identify regions bound by transcription factors.</td>
+      <td>Automatically pair forward peaks with reverse peaks; Correction for bias due to missing reads; Resolve adjacent binding sites using mixture models; Parallel running with multiple CPUs; Implemented in BioConductor; Efficient implementation in C.</td>
+    </tr>
+  </table>
+</div>
+
+
+
+ <div id="mota" style="display:none;" class="answer_list" >    <!--Motif Analysis-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>CisGenome</b></td>
+      <td>An integrated tool for tiling array, ChIP-seq, genome and cis-regulatory element analysist.</td>
+      <td>Matching motifs; motif discovery.</td>
+    </tr>
+    <tr>
+      <td><b>MEME-ChIP</b></td>
+      <td>Motif Analysis of Large Nucleotide Datasets.</td>
+      <td>Better resolution for binding site discovery.</td>
+      <td>Only for paired-end.</td>
+    </tr>
+    <tr>
+      <td><b>Peak-Motif</b></td>
+      <td>Pipeline for discovering motifs in massive ChIP-seq peak sequences.</td>
+      <td>has options for both narrow and broad peak, thus good for RNA PolII; use cross-correlation between minus and plus strand to determine protein-DNA interacting regions</td>
+      <td>For Solexa platform.</td>
+    </tr>
+    <tr>
+      <td><b>rGADEM</b></td>
+      <td>De novo motif discovery.</td>
+      <td>Is fast; can process 10K+ sequences; Identified motifs were fed into MotIV and analyzed with Jaspar.</td>
+    </tr>
+    <tr>
+     
+  </table>
+</div>
+
+
+ 
+ <div id="peakanno" style="display:none;" class="answer_list" >    <!--peakanno-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>ChIPpeakAnno</b></td>
+      <td>A Bioconductor package to annotate ChIP-seq and ChIP-chip data.</td>
+      <td>Implemented in R Bioconductor.</td>
+    </tr>
+  </table>
+</div>
+
+
+
+ <div id="db" style="display:none;" class="answer_list" >    <!--diff binding-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>DBChIP</b></td>
+      <td>DBChIP detects differentially bound sharp binding sites across multiple conditions, with or without matching control samples.</td>
+      <td>Implemented in R Bioconductor.</td>
+    </tr>
+    <tr>
+      <td><b>ChIPDiff</b></td>
+      <td>Identifying differential histone modification sites from ChIP-seq data.</td>
+      <td>differential histone modification sites; HMM model.</td>
+      <td>Broad peaks.</td>
+    </tr>
+  </table>
+</div>
+
+
+
+ <div id="goa" style="display:none;" class="answer_list" >    <!--gene on ana-->                                 
+  <table>
+    <tr>
+      <th>Software&emsp;</th>
+      <th>Descriptions</th>
+      <th>Strength</th>
+      <th>Limitations</th>
+    </tr>
+    <tr>
+      <td><b>FastQC</b></td>
+      <td>Quality control tool for high throughput raw sequence data</td>
+      <td>Plot: Basic Statistics;Per base sequence quality;Per sequence quality scores; Per base sequence content; Per base GC content;Per sequence GC content; Per base N content; Sequence Length Distribution; Sequence Duplication Levels;Overrepresented sequences; Kmer Content; has a GUI.</td>
+      <td>Only report view, no trimming or filtering</td>
+    </tr>
+    <tr>
+      <td><b>QrQc</b></td>
+      <td>Qrqc is a fast and extensible R package that reports basic quality and summary statistics on FASTQ and FASTA files.</td>
+      <td>Base and quality distribution by position, sequence length distribution, and common sequences.</td>
+    </tr>
+    <tr>
+      <td><b>Scythe</b></td>
+      <td>Scythe uses a Naive Bayesian approach to classify contaminant substrings in sequence reads. It considers quality information, which can make it robust in picking out 3â€²-end adapters, which often include poor quality bases.</td>
+    </tr>
+    <tr>
+  </table>
+</div>
+</body>
+
+
+<!-----------------------------------------------------SDS-------------------------------------------------->
+
+
+
+<div class="w3-container w3-teal">
+  <h2 style="font-family: Garamond"><center>Step 3</center></h2>
+</div>
+
+  <center><h3 style="font-family: Garamond ;"><i>Click on any Recommended Software above to access all recommended softwares and their comparisons</i></h3></center>
+
+
+<center><h3 style="font-family: Garamond ;">Software Comparisons</h3></center>
+
+ <div id="divComp1" style="display:none;" class="answer_list" >    <!-- For BWA, BOWTIE, etc.-->                                 
+  <table>
+    <tr>
+      <th>Softwares</th>
+      <th>BWA</th>
+      <th>Bowtie</th>
+      <th>Bowtie2</th>
+    </tr>
+    <tr>
+      <td>Read mapping=gapped</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>Read mapping basepair length=short</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+      <tr>
+      <td>Read mapping basepair length=long </td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+  </table>
+</div>
+
+
+
+ <div id="divComp2" style="display:none;" class="answer_list" >    <!-- For CisGenome vs MEME-ChIP.-->                                 
+  <table>
+    <tr>
+      <th>Softwares</th>
+      <th>CisGenome</th>
+      <th>MEME-ChiP</th>
+    </tr>
+    <tr>
+      <td>Motif analysis= enrich </td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>Motif analysis= de novo</td>
+      <td>no</td>
+      <td>yes</td>
+    </tr>
+  </table>
+</div>
+</body>
+
+
+
+
+
+
+
+
